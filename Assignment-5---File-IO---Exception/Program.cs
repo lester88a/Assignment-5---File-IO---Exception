@@ -22,7 +22,6 @@ namespace Assignment_5___File_IO___Exception
             string pathName = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName; //declear the current path as a pathName
             string fileName = "GradeFile.txt"; //declear the file name
 
-
             int choice = 0; //declear local variable for choice
 
             while (choice != 2) //while loop menu
@@ -46,9 +45,9 @@ namespace Assignment_5___File_IO___Exception
                 switch (choice)
                 {
                     case 1:
-                        CheckFile();
-                        WriteFileMethod(pathName,fileName);
-                        ReadFileMethod(pathName, fileName);
+                        WriteFileMethod(pathName,fileName); //created the text file
+                        CheckFile(); //check file if exist
+                        ReadFileMethod(pathName, fileName); //display the file on console
                         break;
                     case 2://select to exit
                         Console.WriteLine();
