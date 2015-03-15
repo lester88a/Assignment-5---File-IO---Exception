@@ -29,6 +29,7 @@ namespace Assignment_5___File_IO___Exception
                 catch (Exception error)
                 {
                     choice = 0;
+                    //Console.WriteLine(error.Message);
                 }
                 switch (choice)
                 {
@@ -36,18 +37,30 @@ namespace Assignment_5___File_IO___Exception
                        
                         
                         break;
-                    case 2:
+                    case 2://select to exit
                         Console.WriteLine();
                         break;
-                    default:
+                    default: //display incorrect input message
                         Console.WriteLine();
                         Console.WriteLine("Incorrect input, please try again!");
                         Console.WriteLine();
+                        WaitForKey();
                         break;
                 }
                 Console.Clear(); //clear the screen
 
             }
+        }
+
+        // UTILITY METHODS
+        private static void WaitForKey()
+        {
+            Console.WriteLine();
+            Console.WriteLine("++++++++++++++++++++++++++++++++++");
+            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine("++++++++++++++++++++++++++++++++++");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }
